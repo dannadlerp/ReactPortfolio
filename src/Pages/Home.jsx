@@ -1,15 +1,15 @@
-
-import React from 'react'
-
 function Home() {
   return (
-    <React.Fragment>
+    <div className="Page">
+      <div className="home"></div>
+      <h1 className="title">Home</h1>
 
-    <div className='home'>
-      
+      <p className="home">
+        <img src="https://via.placeholder.com/150" alt="imageplaceholder" />
+        Homepage
+      </p>
     </div>
-    </React.Fragment>
-  )
+  );
 }
 
-export default Home
+export default Home;

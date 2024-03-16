@@ -1,57 +1,54 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { FaBars } from 'react-icons/fa';
-//import { MdOutlineClose } from 'react-icons/md';
-import { IconContext } from 'react-icons';
-import { Link } from 'react-router-dom';
-import { SidebarData } from './SidebarData';
-import './Navbar.css';
+import React, { useState } from "react";
 
-function Navbar() {
-    const [sidebar, setSidebar] = useState(false);
-    const navbarRef = useRef(null);
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Navbar.css";
 
-    const toggleSidebar = () => setSidebar(prevState => !prevState); // Toggle function
+const NavbarComponent = () => {
+  const [showLinks, setShowLinks] = useState(false);
 
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (sidebar && navbarRef.current && !navbarRef.current.contains(event.target)) {
-                setSidebar(false);
-            }
-        };
+  const toggleLinks = () => {
+    setShowLinks(!showLinks);
+  };
 
-        document.addEventListener('click', handleClickOutside);
+  return (
+    <React.Fragment>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container">
+          <a className="navbar-brand" href="/"></a>
+          <header>React Project Portfolio</header>
+          <button
+            className="navbar-toggler"
+            type="button"
+            onClick={toggleLinks}
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div
+            className={`collapse navbar-collapse ${showLinks ? "show" : ""}`}
+            id="navbarNav"
+          >
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="../Pages/projects">
+                  Projects
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="../Pages/contactinfo">
+                  Contact Info
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </React.Fragment>
+  );
+};
 
-        return () => {
-            document.removeEventListener('click', handleClickOutside);
-        };
-    }, [sidebar]);
-
-    return (
-        <React.Fragment>
-            <IconContext.Provider value={{ color: '#fff' }}>
-                <div className="navbar" ref={navbarRef}>
-                    <Link to="#" className="menu-bars">
-                        <FaBars onClick={toggleSidebar} />
-                    </Link>
-                </div>
-                <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                    {sidebar && (
-                        <ul className='nav-menu-items'>
-
-                            {SidebarData.map((item, index) => (
-                                <li key={index} className={item.cName} onClick={toggleSidebar}>
-                                    <Link to={item.path}>
-                                        {item.icon}
-                                        <span>{item.title}</span>
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                </nav>
-            </IconContext.Provider>
-        </React.Fragment>
-    );
-}
-
-export default Navbar;
+export default NavbarComponent;
