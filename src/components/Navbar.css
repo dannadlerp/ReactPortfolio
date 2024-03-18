@@ -66,3 +66,7 @@ header {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
+
+  .hide-navbar {
+    display: none !important;
+  }

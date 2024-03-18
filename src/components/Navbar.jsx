@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
 
@@ -14,15 +13,20 @@ const NavbarComponent = () => {
     <React.Fragment>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          <a className="navbar-brand" href="/"></a>
-          <header>React Project Portfolio</header>
+          {/* Button in the left corner */}
           <button
             className="navbar-toggler"
             type="button"
             onClick={toggleLinks}
           >
-            <span className="navbar-toggler-icon"></span>
+            <img
+              src="https://icons.veryicon.com/png/o/miscellaneous/big-data-regular-monochrome-icon/sidebar-4.png"
+              alt="Toggle Button"
+              style={{ width: "30px", height: "30px" }}
+            />
           </button>
+
+          <header>React Project Portfolio</header>
           <div
             className={`collapse navbar-collapse ${showLinks ? "show" : ""}`}
             id="navbarNav"
@@ -34,12 +38,12 @@ const NavbarComponent = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="../Pages/projects">
+                <a className="nav-link" href="/projects">
                   Projects
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="../Pages/contactinfo">
+                <a className="nav-link" href="/contactinfo">
                   Contact Info
                 </a>
               </li>

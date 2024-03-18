@@ -32,3 +32,26 @@
     justify-content: center;
     display: flex;
 }
+
+/* .centered {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+} */
+.centered {
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+ .centered img {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.project-image {
+    height: 200px;
+    width: 200px;
+}

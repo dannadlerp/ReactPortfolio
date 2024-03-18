@@ -24,14 +24,6 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  /* margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh; */
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -90,8 +82,19 @@ bottom: 0;
 }
 
 .Page {
-  display: flex;
+/*   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  margin-left: 50%;
+  margin-right: 50%;
   width: 100vw;
 } 
+
+.project-image {
+  height: 200px;
+  width: 200px;
+}
+
+.project {
+  display: flex;
+}
