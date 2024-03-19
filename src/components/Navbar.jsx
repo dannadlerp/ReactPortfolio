@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Navbar.css";
 
 const NavbarComponent = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -13,7 +12,6 @@ const NavbarComponent = () => {
     <React.Fragment>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          {/* Button in the left corner */}
           <button
             className="navbar-toggler"
             type="button"
@@ -26,7 +24,7 @@ const NavbarComponent = () => {
             />
           </button>
 
-          <header>React Project Portfolio</header>
+          <header> React Project Portfolio</header>
           <div
             className={`collapse navbar-collapse ${showLinks ? "show" : ""}`}
             id="navbarNav"
@@ -47,6 +45,12 @@ const NavbarComponent = () => {
                   Contact Info
                 </a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/resume">
+                  Resume
+                </a>
+              </li>
+              <li className="nav-title"> Dan Nadler</li>
             </ul>
           </div>
         </div>
