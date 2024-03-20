@@ -1,10 +1,44 @@
-sidebar url: https://www.flowbite-react.com/docs/components/sidebar
+React Coding Profile
 
-# React + Vite
+# Table of Contents
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [Motivation](#motivation)
+- [Purpose](#purpose)
+- [Solution](#solution)
+- [Learnings](#learnings)
+- [Run Instructions](#run-instructions)
+- [Github Repository](#gitHub)
+- [Email](#email)
+- [License](#license)
 
-Currently, two official plugins are available:
+## Motivation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A need to showcase my React coding abilities
+
+## Purpose
+
+So that I have a live site that I can showcase my abilities for future employment
+
+## Solution
+
+The need for an online job profile
+
+## Learnings
+
+Many aspects of REACT styling, framework, referencing, etc
+
+## Run Instructions
+
+npm i, npm start
+
+# GitHub
+
+https://github.com/dannadlerp/ReactPortfolio
+
+# Email
+
+dan.nadlerp@gmail.com
+
+## License
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)

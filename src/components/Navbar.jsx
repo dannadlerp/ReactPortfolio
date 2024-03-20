@@ -1,16 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const NavbarComponent = () => {
   const [showLinks, setShowLinks] = useState(false);
+  const location = useLocation();
 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
 
+  // Effect to close the links dropdown when the location changes
+  useEffect(() => {
+    setShowLinks(false);
+  }, [location]);
+
   return (
     <React.Fragment>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
           <button
             className="navbar-toggler"
@@ -31,22 +38,42 @@ const NavbarComponent = () => {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Home
+                <a
+                  className={`nav-link ${
+                    location.pathname === "/" && "active"
+                  }`}
+                  href="/"
+                >
+                  About Me
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/projects">
+                <a
+                  className={`nav-link ${
+                    location.pathname === "/projects" && "active"
+                  }`}
+                  href="/projects"
+                >
                   Projects
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/contactinfo">
-                  Contact Info
+                <a
+                  className={`nav-link ${
+                    location.pathname === "/contactinfo" && "active"
+                  }`}
+                  href="/contactinfo"
+                >
+                  Contact
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/resume">
+                <a
+                  className={`nav-link ${
+                    location.pathname === "/resume" && "active"
+                  }`}
+                  href="/resume"
+                >
                   Resume
                 </a>
               </li>
