@@ -1,4 +1,4 @@
-Github deployed URL: 
+Github deployed URL: https://github.com/dannadlerp/ReactPortfolio/deployments/github-pages
 
 ![image](https://github.com/dannadlerp/ReactPortfolio/assets/142226474/042072f9-b13e-4a23-a98a-dc817c4304c4)
 
