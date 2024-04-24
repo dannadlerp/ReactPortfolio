@@ -1,7 +1,19 @@
-header {
-  text-align: center;
+.container-fluid {
   display: flex;
-  font-size: large;
-  background-color:darkkhaki; 
+  width: 100vw;
+  border-bottom: solid 2px #fff;
+}
 
+.navbar-toggler {
+  position: top;
+  margin: 0;
+}
+
+navbar-brand {
+  position: fixed;
+  margin: 0;
+}
+
+.logo-image {
+  margin: 0;
 }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "../assets/logo.png";
+import "./Navbar.css";
 
 const NavbarComponent = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -17,67 +19,78 @@ const NavbarComponent = () => {
 
   return (
     <React.Fragment>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container">
+      <nav
+        className="navbar navbar-expand-lg navbar-dark bg-dark"
+        style={{ borderBottom: "2px solid #fff" }}
+      >
+        <div className="container-fluid">
           <button
             className="navbar-toggler"
             type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
             onClick={toggleLinks}
           >
-            <img
-              src="https://icons.veryicon.com/png/o/miscellaneous/big-data-regular-monochrome-icon/sidebar-4.png"
-              alt="Toggle Button"
-              style={{ width: "30px", height: "30px" }}
-            />
+            <span className="navbar-toggler-icon"></span>
           </button>
-
-          <header> React Project Portfolio</header>
+          <Link to="/" className="navbar-brand">
+            <img
+              src={logo}
+              className="logo-image"
+              alt="site logo"
+              height={20}
+              width={20}
+            />
+            Dan Nadler
+          </Link>
           <div
             className={`collapse navbar-collapse ${showLinks ? "show" : ""}`}
             id="navbarNav"
           >
-            <ul className="navbar-nav">
+            <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a
+                <Link
+                  to="/"
                   className={`nav-link ${
                     location.pathname === "/" && "active"
                   }`}
-                  href="/"
                 >
                   About Me
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
+                  to="/projects"
                   className={`nav-link ${
                     location.pathname === "/projects" && "active"
                   }`}
-                  href="/projects"
                 >
                   Projects
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
+                  to="/contactinfo"
                   className={`nav-link ${
                     location.pathname === "/contactinfo" && "active"
                   }`}
-                  href="/contactinfo"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
+                  to="/resume"
                   className={`nav-link ${
                     location.pathname === "/resume" && "active"
                   }`}
-                  href="/resume"
                 >
                   Resume
-                </a>
+                </Link>
               </li>
-              <li className="nav-title"> Dan Nadler</li>
             </ul>
           </div>
         </div>

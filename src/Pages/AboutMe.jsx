@@ -8,12 +8,14 @@ function Home() {
         <h1 className="title">About Me</h1>
         <img className="headshot" src={headShot} alt="headshot image" />
         <p className="aboutme-content">
-          My name is Dan Nadler and I am a Full Stack Developer. <br />I am
-          currently finishing my Full Stack Web Development Bootcamp at the
-          University of Toronto.
+          My name is Dan Nadler and I am a Full Stack Developer.
+          <br />
           <br />I am looking for a position as a Full Stack Developer. I am
           proficient in HTML, CSS, JavaScript, Node.js, Express.js, SQL,
           MongoDB, and React.
+          <br />
+          <br />I have completed my Full Stack Web Development Bootcamp at the
+          University of Toronto.
         </p>
       </div>
     </div>

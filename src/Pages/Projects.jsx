@@ -1,9 +1,14 @@
+import ProjectCard from "../components/ProjectCard";
 import projectImage1 from "../assets/weathertrackerapiscreenshot.png";
 import projectImage2 from "../assets/cliemployeetrackerscreenshot.png";
 import projectImage3 from "../assets/notetakerappscreenshot.png";
 import projectImage4 from "../assets/PWAtexteditorScreenshot.png";
 import projectImage5 from "../assets/downtofitnessScreenshot.png";
 import projectImage6 from "../assets/readmegeneratorScreenshot.png";
+const projectDescription1 =
+  "Given a city input, current and future weather info is gathered and displayed dynamically using a RESTFUL API structure.";
+const projectDescription2 =
+  "A command line employee management app that allows users to manage staff, salaries, roles, departments, etc";
 function Projects() {
   return (
     <div className="Page">
@@ -13,51 +18,20 @@ function Projects() {
           <h1 className="title">Projects</h1>
         </div>
         <div className="centered">
-          <div className="project">
-            <img
-              className="project-image"
-              src={projectImage1}
-              alt="Weather API image"
-              /*             height={imgHeight}
-            width={imgWidth} */
-              style={{ marginBottom: "50px", marginRight: "50px" }}
-            />
-
-            <div className="project-description">
-              <a href="https://github.com/dannadlerp/weatherTracker/">
-                <strong>Weather API (Git Repo) - </strong>
-              </a>
-              <a href="https://dannadlerp.github.io/weatherTracker/">
-                <strong>Weather API (Deployed)</strong>
-              </a>
-              <p className="projects">
-                Given a city input, current and future weather info is gathered
-                and displayed dynamically using a RESTFUL API structure.
-              </p>
-            </div>
-          </div>
-
-          <div className="project">
-            <img
-              className="project-image"
-              src={projectImage2}
-              alt="Employee Tracker CLI image"
-              /*             height={imgHeight}
-            width={imgWidth} */
-              style={{ marginBottom: "50px", marginRight: "50px" }}
-            />
-            <div className="project-description">
-              <a href="https://github.com/dannadlerp/employeeTracker">
-                <strong>Employee Management App (Git Repo) - </strong>
-              </a>
-              <strong>Type of app cannot be deployed</strong>
-
-              <p className="projects">
-                A command line employee management app that allows users to
-                manage staff, salaries, roles, departments, etc
-              </p>
-            </div>
-          </div>
+          <ProjectCard
+            imageUrl={projectImage1}
+            title={"Weather API (Git Repo) - Weather API (Deployed)"}
+            description={projectDescription1}
+            redirectUrl={"https://dannadlerp.github.io/weatherTracker/"}
+          />
+          <ProjectCard
+            imageUrl={projectImage2}
+            title={
+              "Employee Management App (Git Repo) CLI app cannot be deployed"
+            }
+            description={projectDescription2}
+            redirectUrl={"https://dannadlerp.github.io/weatherTracker/"}
+          />
         </div>
 
         <div className="project">

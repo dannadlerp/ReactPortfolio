@@ -14,13 +14,13 @@ function Resume() {
 
           <div className="centered">
             <div className="resume-info">
-              Resume Summary
+              Resume Highlights
               <br />
               <br />
               EDUCATION
               <br />
               <br />
-              UNIVERSITY OF TORONTO - 2024
+              UNIVERSITY OF TORONTO
               <br />
               SCHOOL OF INFORMATION TECHNOLOGY Toronto, Ontario
               <br />
@@ -73,9 +73,9 @@ function Resume() {
             <br />
             <br /> */}
               ACHIEVEMENTS/ AWARDS/ CERTIFICATES
-              <br /> • Certificate - Complete Python Mastery Jan 2021 – Python
+              <br /> • Certificate - Complete Python Mastery – Python
               programming code course – codewithmosh.com
-              <br /> • Certificate - Clean Coding and Refactoring Jan 2021
+              <br /> • Certificate - Clean Coding and Refactoring
               <br /> – • Certificate - Clean Coding/Syntax course –
               codewithmosh.com <br /> <br />
               SKILLS <br />
